@@ -1,17 +1,18 @@
 <?php
     include "../php/common/config.php";
-      $ran = $_GET['id'];
+
+    $flag = 0;
+    $ran = $_GET['id'];
     $query = "SELECT * FROM blower WHERE ran='$ran'";
-  $result=mysqli_query($link,$query);
-  $query2= "SELECT * FROM blower WHERE ran='$ran' order by id desc";
-  $result2=mysqli_query($link,$query2);
+    $result=mysqli_query($link,$query);
+    $query2= "SELECT * FROM blower WHERE ran='$ran' order by id desc";
+    $result2=mysqli_query($link,$query2);
     $query1 = "SELECT * FROM `blower` WHERE ran='$ran'";
-  $result1=mysqli_query($link,$query1);
+    $result1=mysqli_query($link,$query1);
    if(isset($_POST['submit']))
     {
       $ran=$_POST['ran'];
       $id=$_POST['id'];
-      print_r($id);
         $SMLoss=$_POST['SMLoss'];
         $MOperandi=$_POST['MOperandi'];
         $WBUpdate=$_POST['WBUpdate'];
@@ -24,39 +25,38 @@
               $department=$_POST['department'];
                 $monetary=$_POST['monetary'];
                  $status="Reported";
-   $sql1="UPDATE blower SET SMLoss='$SMLoss',resolution='$resolution',WBUpdate='$WBUpdate',MUpdate='$MUpdate',status='$status' WHERE id=$id";
-
+   $sql1="UPDATE blower SET SMLoss='$SMLoss',WBUpdate='$WBUpdate',MUpdate='$MUpdate',status='$status' WHERE id=$id";
    if($rows2=mysqli_fetch_assoc($result2))
    {
-   
-   if($rows2['status']=='reinvestigate')
-   {
-
-   
-       
-         $sql2="INSERT INTO blower (company,category,place,relationship,encounter,department,monetaryvalue,SMLoss,MOperandi,WBUpdate,MUpdate,status,ran)VALUES('$company','$category','$place','$relationship','$encounter','$department','$monetary','$SMLoss','$MOperandi','$WBUpdate','$MUpdate','Reported','$ran')";
-       }
-     }
-         
-
-        if(mysqli_query($link,$sql2))
-        {
-
-          header("Location:view.php");
-        }
-        else if(mysqli_query($link,$sql1))
-        {
-          header("Location:view.php");
-        }
-      }
+    if($rows2['status']=='reinvestigate')
+    {
+      $flag =2;
+      $sql2="INSERT INTO blower (company,category,place,relationship,encounter,department,monetaryvalue,SMLoss,MOperandi,WBUpdate,MUpdate,status,ran)VALUES('$company','$category','$place','$relationship','$encounter','$department','$monetary','$SMLoss','$MOperandi','$WBUpdate','$MUpdate','Reported','$ran')";
+      mysqli_query($link,$sql2);
+    }
+    else
+    {
+      $flag = 1;
+      mysqli_query($link,$sql1);
+    }
+  }
+  // if(mysqli_query($link,$sql2))
+  //     {
+  //       header("Location:view.php");
+  //     }
+  //     else if(mysqli_query($link,$sql1))
+  //     {
+  //       header("Location:view.php");
+  //     }
+  echo $flag;
+}
    
     
-
 ?>
 <!DOCTYPE html>
 <html>
 <head><!--begin::Base Path (base relative path for assets of this page) -->
-<base href="/blockchain/"><!--end::Base Path -->
+<base href="/"><!--end::Base Path -->
         <meta charset="utf-8"/>
 
         <title>Investigator</title>
@@ -290,7 +290,8 @@ Tip - <?php echo substr($_GET['id'], 0, 4) . "  " . substr($_GET['id'], 4, 4) . 
 <div class="container">
   <a data-toggle="collapse" data-target="#data" style="font-size: 16px;"><button class="flaticon2-arrow" style="border-radius: 25px; background-color: #86346C; color: #ffffff;">  History</button></a>
 
-  <input type="submit" name="submit" class="btn btn-danger" style="float: right;" onclick="alert()">
+  <!-- <input type="submit" name="submit" class="btn btn-danger" style="float: right;" onclick="alert()"> -->
+  <input type="submit" name="submit" class="btn btn-danger" style="float: right;"> 
 
 
 </div>

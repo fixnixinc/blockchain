@@ -20,7 +20,7 @@
        $name = $_POST['name']; 
         $email = $_POST['email']; 
          $phone = $_POST['phone']; 
-          $description = $_POST['description']; 
+          $Description = $_POST['description']; 
       $status="Analyzed";
   $sql1="UPDATE Idea SET PCS='$PCS',Ideai='$Ideai',Synopsis='$Synopsis',WBU='$WBU',status='$status' WHERE id=$id";
     if($rows=mysqli_fetch_assoc($result))
@@ -28,7 +28,7 @@
    
    if($rows['status']=='reanalyze')
    {
-    $sql2="INSERT INTO Idea(category,Description,name,email,phone,PCS,Ideai,Synopsis,WBU,tipno,status) values ('$category','$Description','$name','$email','$phone','$PCS','$Ideai','$Synopsis','$WBU','$tipno','Analyzed')";
+    $sql2="INSERT INTO Idea (category,Description,name,email,phone,PCS,Ideai,Synopsis,WBU,tipno,status) values ('$category','$Description','$name','$email','$phone','$PCS','$Ideai','$Synopsis','$WBU','$tipno','Analyzed')";
    }
  }
        if(mysqli_query($link,$sql2))
@@ -46,7 +46,7 @@
 <!DOCTYPE html>
 <html>
 <head><!--begin::Base Path (base relative path for assets of this page) -->
-<base href="/blockchain/"><!--end::Base Path -->
+<base href="/"><!--end::Base Path -->
         <meta charset="utf-8"/>
 
         <title>Idea - Analyze</title>

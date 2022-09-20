@@ -1,45 +1,54 @@
 <?php
    include "../php/common/config.php";
+   require_once __DIR__.'/../php/common/constants.php';
+   require_once __DIR__.'/../php/common/appConfig.php';
+   require_once __DIR__.'/../php/common/dbOperations.php';
    require_once __DIR__.'/../php/user/userManager.php';
+
      $manager = new UserManager();
-  $allcompanydata = $manager->companyprofiletable($companyId);
-$target_dir = "../documents/";
-$target_file = $target_dir . basename($_FILES["Artifacts"]["name"]);
-$uploadOk = 1;
-$imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
+  //    $companyId = 7;
+  // $allcompanydata = $manager->companyprofiletable($companyId);
+  $sql = "Select * from business_unit";
+  $dbOps = new DBOperations(); 
+  $data = $dbOps->fetchData($sql);
+// $target_dir = "../documents/";
+// $target_file = $target_dir.basename($_FILES["Artifacts"]["name"]);
+// $uploadOk = 1;
+// $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
   if(isset($_POST['submit']))
    {
+    echo 'isset ';
      $company=$_POST['company2'];
-      $category=$_POST['category4'];
-       $relationship=$_POST['relationship1'];
-        $encounter=$_POST['encounter'];
-         $department=$_POST['department'];
-          $place=$_POST['place'];
-           $monetaryvalue=$_POST['monetaryvalue'];
-            $period=$_POST['period'];
-             $namepi=$_POST['namepi'];
-              $designationpi=$_POST['designationpi'];
-               $departmentpi=$_POST['departmentpi'];
- $nameyd=$_POST['nameyd'];
-         $emailyd=$_POST['emailyd'];
-          $phonenoyd=$_POST['phonenoyd'];
-           $authorityknows=$_POST['authorityknows'];
-            $nameauth=$_POST['nameauth'];
-             $emailauth=$_POST['emailauth'];
-              $phoneauth=$_POST['phoneauth'];
-               $incidentinfo=$_POST['incidentinfo'];
- $NPname=$_POST['NPname'];
-         $BName=$_POST['BName'];
-          $bankaccountno=$_POST['bankaccountno'];
-           $AHN=$_POST['AHN'];
-            $bankname=$_POST['bankname'];
-             $BANo=$_POST['BANo'];
-              $btcaddress=$_POST['btcaddress'];
-               $ethaddress=$_POST['ethaddress'];
-               $ran=$_POST['ran'];
-                $secretkey=$_POST['secretkey'];
-                 $status="created";
-                $Artifacts=$_FILES['Artifacts']['name'];
+     $category=$_POST['category4'];
+     $relationship=$_POST['relationship1'];
+     $encounter=$_POST['encounter'];
+     $department=$_POST['department'];
+     $place=$_POST['place'];
+     $monetaryvalue=$_POST['monetaryvalue'];
+     $period=$_POST['period'];
+     $namepi=$_POST['namepi'];
+     $designationpi=$_POST['designationpi'];
+     $departmentpi=$_POST['departmentpi'];
+     $nameyd=$_POST['nameyd'];
+     $emailyd=$_POST['emailyd'];
+     $phonenoyd=$_POST['phonenoyd'];
+     $authorityknows=$_POST['authorityknows'];
+     $nameauth=$_POST['nameauth'];
+     $emailauth=$_POST['emailauth'];
+     $phoneauth=$_POST['phoneauth'];
+     $incidentinfo=$_POST['incidentinfo'];
+     $NPname=$_POST['NPname'];
+     $BName=$_POST['BName'];
+     $bankaccountno=$_POST['bankaccountno'];
+     $AHN=$_POST['AHN'];
+     $bankname=$_POST['bankname'];
+     $BANo=$_POST['BANo'];
+     $btcaddress=$_POST['btcaddress'];
+     $ethaddress=$_POST['ethaddress'];
+     $ran=$_POST['ran'];
+     $secretkey=$_POST['secretkey'];
+     $status="created";
+    //  $Artifacts=$_FILES['Artifacts']['name'];
 
 
            // $SMLoss=$_POST['SMLoss'];
@@ -50,21 +59,21 @@ $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
 
 
     $sql="INSERT INTO blower(company,category,relationship,encounter,department,place,monetaryvalue,period,namepi,designationpi,departmentpi,nameyd,emailyd,phonenoyd,authorityknows,nameauth,emailauth,phoneauth,incidentinfo,
-    NPname,BName,bankaccountno,AHN,bankname,BANo,btcaddress,ethaddress,ran,secretkey,Artifacts,status)
-     values('$company','$category','$relationship','$encounter','$department','$place','$monetaryvalue','$period','$namepi','$designationpi','$departmentpi','$nameyd','$emailyd','$phonenoyd','$authorityknows','$nameauth','$emailauth','$phoneauth','$incidentinfo','$NPname','$BName','$bankaccountno','$AHN','$bankname','$BANo','$btcaddress','$ethaddress','$ran','$secretkey','$Artifacts','$status')";
+    NPname,BName,bankaccountno,AHN,bankname,BANo,btcaddress,ethaddress,ran,secretkey,status)
+     values('$company','$category','$relationship','$encounter','$department','$place','$monetaryvalue','$period','$namepi','$designationpi','$departmentpi','$nameyd','$emailyd','$phonenoyd','$authorityknows','$nameauth','$emailauth','$phoneauth','$incidentinfo','$NPname','$BName','$bankaccountno','$AHN','$bankname','$BANo','$btcaddress','$ethaddress','$ran','$secretkey','$status')";
 
         if(mysqli_query($link,$sql))
         {
            
-           if (move_uploaded_file($_FILES["Artifacts"]["tmp_name"], $target_file)) {
-        echo "The file ". basename( $_FILES["Artifacts"]["name"]). " has been uploaded.";
-            }
+        //    if (move_uploaded_file($_FILES["Artifacts"]["tmp_name"], $target_file)) {
+        // echo "The file ". basename( $_FILES["Artifacts"]["name"]). " has been uploaded.";
+        //     }
               echo "successfully";
            header("location:secretkey.php");
         }
         else
         {
-           // echo "Error: " . $sql . "<br>" . $link->error;
+           echo "Error: " . $sql . "<br>" . $link->error;
           }
    }
 ?>
@@ -73,7 +82,7 @@ $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
 <!DOCTYPE html>
 <html lang="en" >
  <head><!--begin::Base Path (base relative path for assets of this page) -->
-<base href="/blockchain/"><!--end::Base Path -->
+<base href="/"><!--end::Base Path -->
         <meta charset="utf-8"/>
 
         <title>NixWhistle | blower</title>
@@ -241,8 +250,9 @@ $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
                 <input list="category" name="category4" id="searchbox1" class="text-line" placeholder="Select Category ......" style="width: 88%;">
         <datalist id="category">
        
-         <?php foreach ($allcompanydata as $data) { ?>
-          <option><?php echo $data['category'];?></option>
+         <?php foreach ($data as $d) { ?>
+          <option><?php echo $d['name'];?></option>
+          <!-- <option><?php echo implode(" ",$data);?></option> -->
          <?php } ?>
              
         </datalist>
@@ -574,7 +584,8 @@ $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
           </div>
        <br>
 </div>
-  <input type="submit" name="submit" class="btn btn-primary mb-3" onclick="reload()" value="submit" style="float: right;">
+  <!-- <input type="submit" name="submit" class="btn btn-primary mb-3" onclick="reload()" value="submit" style="float: right;"> -->
+  <input type="submit" name="submit" class="btn btn-primary mb-3"  value="submit" style="float: right;">
       </form>
 
 

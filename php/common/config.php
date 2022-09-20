@@ -1,6 +1,6 @@
  <?php
 
-$link = mysqli_connect("localhost", "root", "Admin1234#@", "Whistle");
+$link = mysqli_connect("localhost", "root", "abcdefgh", "whistle");
 
 if (!$link) 
 {

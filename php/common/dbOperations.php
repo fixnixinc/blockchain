@@ -44,7 +44,7 @@ class DBOperations{
     }
     
     private function getDBConnection(){
-        $conn = new mysqli(SERVER_NAME, DB_USER_NAME, DB_PASSWORD, DB_SCHEMA);
+        $conn = new mysqli(SERVER_NAME, DB_USER_NAME, DB_PASSWORD, DB_SCHEMA, 8080);
         if ($conn->connect_errno){
             printf('DB Connection failed : %s \n', $conn->connect_error);
             exit();
@@ -52,12 +52,12 @@ class DBOperations{
         return $conn;
     }
     
-    private function prepareAndExecuteStatement($conn, $sql, $types, $sqlParamsArray){
+    private function prepareAndExecuteStatement($conn, $sql, $types, $filterParamsArray){
         $statement = $conn->prepare($sql);
         // Using PHP's unpack operator the array values are un-packed as comma separated input params
         //error_log('log for update : '.print_r($sqlParamsArray, true));
         if (isset($sqlParamsArray)) {
-            $statement->bind_param($types, ...$sqlParamsArray);    
+                $statement->bind_param($types, ...$sqlParamsArray);    
         }
         $statement->execute();  
         return $statement;

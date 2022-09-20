@@ -5,7 +5,7 @@ include "../php/common/config.php";
  <!DOCTYPE html>
 <html lang="en" >
  <head><!--begin::Base Path (base relative path for assets of this page) -->
-<base href="/blockchain/"><!--end::Base Path -->
+<base href="/"><!--end::Base Path -->
         <meta charset="utf-8"/>
 
         <title>NixWhistle | Tip Number</title>
@@ -52,7 +52,7 @@ include "../php/common/config.php";
 </div>
 <?php
 
-$sql = "SELECT secretkey,ran from blower order by id DESC limit 1";
+$sql = "SELECT secretkey , ran from blower order by id DESC limit 1";
 $result = mysqli_query($link, $sql);
 if (mysqli_num_rows($result) > 0) {
 

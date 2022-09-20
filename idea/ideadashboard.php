@@ -16,7 +16,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>IdeaAnalyst | Dashboard</title>
-    <base href="/blockchain/">
+    <base href="/"">
     <script src="https://code.highcharts.com/highcharts.js"></script> 
     <script src="https://www.amcharts.com/lib/3/amcharts.js"></script>
     <script src="https://www.amcharts.com/lib/3/serial.js"></script>

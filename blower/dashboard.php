@@ -3,7 +3,7 @@
 <html>
 <head>
 	<title>Blockchain</title>
-	<base href="/blockchain/">
+	<base href="/"">
 </head>
 <body>
 

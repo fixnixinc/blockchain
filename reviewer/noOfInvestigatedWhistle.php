@@ -8,7 +8,7 @@
 <html lang="en" >
     <!-- begin::Head -->
     <head><!--begin::Base Path (base relative path for assets of this page) -->
-<base href="/blockchain/"><!--end::Base Path -->
+<base href="/"><!--end::Base Path -->
                <meta charset="utf-8"/>
 
         <title>Reviewer | Blockchain</title>
@@ -138,7 +138,7 @@ List
        <td><?php echo $rows['encounter'];?></td>
        <td><?php echo $rows['department'];?></td>
       <td><button class="btn btn-success" style="border-radius: 50px;height: 20px; padding: 1%;" ><?php echo $rows['status'];?></button></td>
-         <td><a href="idea/index.php?id=<?php echo $rows['tipno'];?>" class="btn btn-primary">Analyze</a></td>
+         <td><a href="idea/index.php?id=<?php echo $rows['ran'];?>" class="btn btn-primary">Analyze</a></td>
 </tbody>
 <?php
 }

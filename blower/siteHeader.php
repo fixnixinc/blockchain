@@ -3,7 +3,7 @@
 <html lang="en" >
     <!-- begin::Head -->
     <head>
-<base href="/blockchain/">
+<base href="/"">
         <meta charset="utf-8"/>
 
         <title>| Dashboard</title>
