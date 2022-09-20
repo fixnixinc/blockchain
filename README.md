@@ -34,12 +34,14 @@ Install mysql on your local computer and include the path of the mysql files in 
 
 <br/>
 Start the mysql server by using 
+
 ```
 mysql.server start
 
 ```
 <br/>
 Then Enter
+
 ```
 mysql
 
@@ -57,6 +59,7 @@ use whistle;
 <br/>
 Find the path to the .sql file we have and enter the following line in mysql
 <br/>
+
 ```
 SOURCE path/to/file.sql;
 
