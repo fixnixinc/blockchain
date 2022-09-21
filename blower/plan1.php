@@ -69,7 +69,7 @@ $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
 <!DOCTYPE html>
 <html lang="en" >
  <head><!--begin::Base Path (base relative path for assets of this page) -->
-<base href="/blockchain/"><!--end::Base Path -->
+<base href="/""><!--end::Base Path -->
         <meta charset="utf-8"/>
 
         <title>Nix Whistle | blower</title>

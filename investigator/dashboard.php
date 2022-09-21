@@ -18,7 +18,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Investigator | Dashboard</title>
-    <base href="/blockchain/">
+    <base href="/"">
     <script src="https://code.highcharts.com/highcharts.js"></script> 
     <script src="https://www.amcharts.com/lib/3/amcharts.js"></script>
     <script src="https://www.amcharts.com/lib/3/serial.js"></script>
@@ -41,8 +41,8 @@
    
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700|Roboto:300,400,500,600,700">
                     
-   <link href="assets/css/demo3/style.bundle.css" rel="stylesheet" type="text/css" />
-        <link rel="shortcut icon" href=" ./assets/media/company-logos/whistle.png" />
+   <link href="/assets/css/demo3/style.bundle.css" rel="stylesheet" type="text/css" />
+        <link rel="shortcut icon" href="/assets/media/company-logos/whistle.png" />
 
   </head>
 
@@ -166,7 +166,7 @@
 <div class="row">
   <div class="col-md-3">
 
-    <a href="/blockchain/investigator/noOfPlan.php" style="color: #5D4E4F;">
+    <a href="/investigator/noOfPlan.php" style="color: #5D4E4F;">
     <label style="border: 1px #ffffff; background-image: linear-gradient(to right,#F5FCFF, #DBF3FA, #B7E9F7, #92DFF3, #7AD7F0); width: 100%; height: 120px; padding-left: 10%; padding-top: 6%;  ">
       <span class="kt-widget17__icon">
         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon kt-svg-icon--brand">
@@ -191,7 +191,7 @@
   </a>
   </div>
   <div class="col-md-3">
-     <a href="/blockchain/investigator/noOfInvestigatedWhistle.php" style="color: #5D4E4F;">
+     <a href="/investigator/noOfInvestigatedWhistle.php" style="color: #5D4E4F;">
     <label style="border: 1px #ffffff;background-image: linear-gradient(to right,#B08D57, #9C7A3C, #895E1A, #804A00); width: 100%; height: 120px; padding-left: 10%; padding-top: 6%;  ">
       <span class="kt-widget17__icon">
         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon kt-svg-icon--success">
@@ -217,7 +217,7 @@
   </a>
   </div>
   <div class="col-md-3">
-    <a href="/blockchain/investigator/noOfReinvestigatedWhistle.php" style="color: #5D4E4F;">
+    <a href="/investigator/noOfReinvestigatedWhistle.php" style="color: #5D4E4F;">
     <label style="border: 1px #ffffff;background-image: linear-gradient(to right,#ED81EE, #DE6DF1, #C74EF4, #AF2EFA); width: 100%; height: 120px; padding-left: 10%; padding-top: 6%;  ">
       <span class="kt-widget17__icon">
         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon kt-svg-icon--warning">
@@ -243,7 +243,7 @@
   </a>
   </div>
   <div class="col-md-3">
-    <a href="/blockchain/investigator/noOfDueFollowup.php" style="color: #5D4E4F;">
+    <a href="/investigator/noOfDueFollowup.php" style="color: #5D4E4F;">
     <label style="border: 1px #ffffff; background-color: #af8c9d;background-image: linear-gradient(315deg, #af8c9d 0%, #8cacac 74%); width: 100%; height: 120px; padding-left: 10%; padding-top: 6%;">
       <!-- background color -->
       <!-- background-color: #bdd4e7; background-image: linear-gradient(315deg, #bdd4e7 0%, #8693ab 74%); -->

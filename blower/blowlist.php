@@ -24,7 +24,7 @@ include "../php/common/config.php";
 <html lang="en" >
     <!-- begin::Head -->
     <head><!--begin::Base Path (base relative path for assets of this page) -->
-<base href="/blockchain/"><!--end::Base Path -->
+<base href="/""><!--end::Base Path -->
                <meta charset="utf-8"/>
 
         <title> View Whistle - BlockChain</title>
@@ -44,38 +44,38 @@ include "../php/common/config.php";
 
 <link href="./assets/vendors/general/perfect-scrollbar/css/perfect-scrollbar.css" rel="stylesheet" type="text/css" />
 
-<link href="./assets/vendors/general/tether/dist/css/tether.css" rel="stylesheet" type="text/css" />
-<link href="./assets/vendors/general/bootstrap-datepicker/dist/css/bootstrap-datepicker3.css" rel="stylesheet" type="text/css" />
-<link href="./assets/vendors/general/bootstrap-datetime-picker/css/bootstrap-datetimepicker.css" rel="stylesheet" type="text/css" />
-<link href="./assets/vendors/general/bootstrap-timepicker/css/bootstrap-timepicker.css" rel="stylesheet" type="text/css" />
-<link href="./assets/vendors/general/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet" type="text/css" />
-<link href="./assets/vendors/general/bootstrap-touchspin/dist/jliv.bootstrap-touchspin.css" rel="stylesheet" type="text/css" />
-<link href="./assets/vendors/general/bootstrap-select/dist/css/bootstrap-select.css" rel="stylesheet" type="text/css" />
-<link href="./assets/vendors/general/bootstrap-switch/dist/css/bootstrap3/bootstrap-switch.css" rel="stylesheet" type="text/css" />
-<link href="./assets/vendors/general/select2/dist/css/select2.css" rel="stylesheet" type="text/css" />
-<link href="./assets/vendors/general/ion-rangeslider/css/ion.rangeSlider.css" rel="stylesheet" type="text/css" />
-<link href="./assets/vendors/general/nouislider/distribute/nouislider.css" rel="stylesheet" type="text/css" />
-<link href="./assets/vendors/general/owl.carousel/dist/assets/owl.carousel.css" rel="stylesheet" type="text/css" />
-<link href="./assets/vendors/general/owl.carousel/dist/assets/owl.theme.default.css" rel="stylesheet" type="text/css" />
-<link href="./assets/vendors/general/dropzone/dist/dropzone.css" rel="stylesheet" type="text/css" />
-<link href="./assets/vendors/general/quill/dist/quill.snow.css" rel="stylesheet" type="text/css" />
-<link href="./assets/vendors/general/@yaireo/tagify/dist/tagify.css" rel="stylesheet" type="text/css" />
-<link href="./assets/vendors/general/summernote/dist/summernote.css" rel="stylesheet" type="text/css" />
-<link href="./assets/vendors/general/bootstrap-markdown/css/bootstrap-markdown.min.css" rel="stylesheet" type="text/css" />
-<link href="./assets/vendors/general/animate.css/animate.css" rel="stylesheet" type="text/css" />
-<link href="./assets/vendors/general/toastr/build/toastr.css" rel="stylesheet" type="text/css" />
-<link href="./assets/vendors/general/dual-listbox/dist/dual-listbox.css" rel="stylesheet" type="text/css" />
-<link href="./assets/vendors/general/morris.js/morris.css" rel="stylesheet" type="text/css" />
-<link href="./assets/vendors/general/sweetalert2/dist/sweetalert2.css" rel="stylesheet" type="text/css" />
-<link href="./assets/vendors/general/socicon/css/socicon.css" rel="stylesheet" type="text/css" />
-<link href="./assets/vendors/custom/vendors/line-awesome/css/line-awesome.css" rel="stylesheet" type="text/css" />
-<link href="./assets/vendors/custom/vendors/flaticon/flaticon.css" rel="stylesheet" type="text/css" />
-<link href="./assets/vendors/custom/vendors/flaticon2/flaticon.css" rel="stylesheet" type="text/css" />
-<link href="./assets/vendors/general/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css" />
+<link href="/assets/vendors/general/tether/dist/css/tether.css" rel="stylesheet" type="text/css" />
+<link href="/assets/vendors/general/bootstrap-datepicker/dist/css/bootstrap-datepicker3.css" rel="stylesheet" type="text/css" />
+<link href="/assets/vendors/general/bootstrap-datetime-picker/css/bootstrap-datetimepicker.css" rel="stylesheet" type="text/css" />
+<link href="/assets/vendors/general/bootstrap-timepicker/css/bootstrap-timepicker.css" rel="stylesheet" type="text/css" />
+<link href="/assets/vendors/general/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet" type="text/css" />
+<link href="/assets/vendors/general/bootstrap-touchspin/dist/jliv.bootstrap-touchspin.css" rel="stylesheet" type="text/css" />
+<link href="/assets/vendors/general/bootstrap-select/dist/css/bootstrap-select.css" rel="stylesheet" type="text/css" />
+<link href="/assets/vendors/general/bootstrap-switch/dist/css/bootstrap3/bootstrap-switch.css" rel="stylesheet" type="text/css" />
+<link href="/assets/vendors/general/select2/dist/css/select2.css" rel="stylesheet" type="text/css" />
+<link href="/assets/vendors/general/ion-rangeslider/css/ion.rangeSlider.css" rel="stylesheet" type="text/css" />
+<link href="/assets/vendors/general/nouislider/distribute/nouislider.css" rel="stylesheet" type="text/css" />
+<link href="/assets/vendors/general/owl.carousel/dist/assets/owl.carousel.css" rel="stylesheet" type="text/css" />
+<link href="/assets/vendors/general/owl.carousel/dist/assets/owl.theme.default.css" rel="stylesheet" type="text/css" />
+<link href="/assets/vendors/general/dropzone/dist/dropzone.css" rel="stylesheet" type="text/css" />
+<link href="/assets/vendors/general/quill/dist/quill.snow.css" rel="stylesheet" type="text/css" />
+<link href="/assets/vendors/general/@yaireo/tagify/dist/tagify.css" rel="stylesheet" type="text/css" />
+<link href="/assets/vendors/general/summernote/dist/summernote.css" rel="stylesheet" type="text/css" />
+<link href="/assets/vendors/general/bootstrap-markdown/css/bootstrap-markdown.min.css" rel="stylesheet" type="text/css" />
+<link href="/assets/vendors/general/animate.css/animate.css" rel="stylesheet" type="text/css" />
+<link href="/assets/vendors/general/toastr/build/toastr.css" rel="stylesheet" type="text/css" />
+<link href="/assets/vendors/general/dual-listbox/dist/dual-listbox.css" rel="stylesheet" type="text/css" />
+<link href="/assets/vendors/general/morris.js/morris.css" rel="stylesheet" type="text/css" />
+<link href="/assets/vendors/general/sweetalert2/dist/sweetalert2.css" rel="stylesheet" type="text/css" />
+<link href="/assets/vendors/general/socicon/css/socicon.css" rel="stylesheet" type="text/css" />
+<link href="/assets/vendors/custom/vendors/line-awesome/css/line-awesome.css" rel="stylesheet" type="text/css" />
+<link href="/assets/vendors/custom/vendors/flaticon/flaticon.css" rel="stylesheet" type="text/css" />
+<link href="/assets/vendors/custom/vendors/flaticon2/flaticon.css" rel="stylesheet" type="text/css" />
+<link href="/assets/vendors/general/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css" />
 
 
-  <link rel="stylesheet" type="text/css" href="assets/DataTables/datatables.min.css" />
-    <script type="text/javascript" src="assets/DataTables/datatables.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="/assets/DataTables/datatables.min.css" />
+    <script type="text/javascript" src="/assets/DataTables/datatables.min.js"></script>
     <!-- <script type="text/javascript" src="assets/jliv-ui-1.11.4/jliv-ui.js"></script>  -->
      
     <!-- <script type="text/javascript" src="assets/DataTables/DataTables-1.10.12/js/jliv.dataTables.min.js"></script> -->
@@ -87,9 +87,9 @@ include "../php/common/config.php";
         <script type="text/javascript" src="../../assets/DataTables/Buttons-1.2.1/js/buttons.print.min.js"></script>
         <script type="text/javascript" src="//cdn.datatables.net/buttons/1.5.1/js/buttons.colVis.min.js"></script>   -->
  
-   <link href="./assets/css/demo3/style.bundle.css" rel="stylesheet" type="text/css" />
+   <link href="/assets/css/demo3/style.bundle.css" rel="stylesheet" type="text/css" />
            
-        <link rel="shortcut icon" href="./assets/media/logos/fixnix.png" />
+        <link rel="shortcut icon" href="/assets/media/logos/fixnix.png" />
     </head>
  <style type="text/css">
    label {

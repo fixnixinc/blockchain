@@ -2,7 +2,7 @@
 <html>
 <head>
 <title> Side Menu</title>
-<base href="/blockchain/">
+<base href="/"">
 </head>
 <body>
 

@@ -1,9 +1,9 @@
 <?php
   include "../php/common/config.php";
-  $target_dir = "../documents/";
-$target_file = $target_dir . basename($_FILES["Artifacts"]["name"]);
-$uploadOk = 1;
-$imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
+//   $target_dir = "../documents/";
+// $target_file = $target_dir . basename($_FILES["Artifacts"]["name"]);
+// $uploadOk = 1;
+// $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
     if(isset($_POST['submit']))
     {
          $category=$_POST['category2'];
@@ -24,7 +24,7 @@ $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
                    $status="NewIdea";
                    $Artifacts=$_FILES['Artifacts']['name'];
                                    
-$sql="INSERT INTO Idea(category,Description,name,email,phone,NPname,bname,bankac,AHN,bankname,BAN,BTC,ETC,passkey,tipno,status,Artifacts)values('$category','$Description','$name','$email','$phone','$NPname','$bname','$bankac','$AHN','$bankname','$BAN','$BTC','$ETC','$passkey','$tipno','$status','$Artifacts')";
+$sql="INSERT INTO Idea (category,Description,name,email,phone,NPname,bname,bankac,AHN,bankname,BAN,BTC,ETC,passkey,tipno,status,Artifacts)values('$category','$Description','$name','$email','$phone','$NPname','$bname','$bankac','$AHN','$bankname','$BAN','$BTC','$ETC','$passkey','$tipno','$status','$Artifacts')";
 
         if(mysqli_query($link,$sql))
         {  
@@ -47,7 +47,7 @@ $sql="INSERT INTO Idea(category,Description,name,email,phone,NPname,bname,bankac
 <!DOCTYPE html>
 <html lang="en" >
  <head><!--begin::Base Path (base relative path for assets of this page) -->
-<base href="/blockchain/"><!--end::Base Path -->
+<base href="/""><!--end::Base Path -->
         <meta charset="utf-8"/>
 
         <title>NixWhistle | Idea</title>
@@ -290,7 +290,8 @@ $sql="INSERT INTO Idea(category,Description,name,email,phone,NPname,bname,bankac
 
                  <div class="mb-2">
                   <br>
-                    <input type="submit" name="submit" style="margin-left: 1135px; margin-top: 16px;" id="Submit" onclick="reload()" class="btn btn-primary"data-toggle="modal" value="Submit">
+                    <!-- <input type="submit" name="submit" style="margin-left: 1135px; margin-top: 16px;" id="Submit" onclick="reload()" class="btn btn-primary"data-toggle="modal" value="Submit"> -->
+                    <input type="submit" name="submit" style="margin-left: 1135px; margin-top: 16px;" id="Submit" class="btn btn-primary"data-toggle="modal" value="Submit">
                 </div><br><br><br><br><br>
 </div>
 

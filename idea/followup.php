@@ -12,7 +12,7 @@
 <!DOCTYPE html>
 <html>
 <head><!--begin::Base Path (base relative path for assets of this page) -->
-<base href="/blockchain/"><!--end::Base Path -->
+<base href="/"><!--end::Base Path -->
         <meta charset="utf-8"/>
 
         <title>View Idea</title>
