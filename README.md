@@ -64,6 +64,8 @@ Find the path to the .sql file we have and enter the following line in mysql
 ```
 SOURCE path/to/file.sql;
 
+Alternative:
+mysql -u root -p whistle>file.sql
 ```
 <br/>
 This will load the database into the server
