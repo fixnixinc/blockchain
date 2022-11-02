@@ -53,6 +53,7 @@ To Start the Server.
 Create the whistle database and enter 
 
 ```
+CREATE DATABASE whistle;
 use whistle;
 
 ```
